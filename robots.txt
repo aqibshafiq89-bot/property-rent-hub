@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aqibshafiq89-bot.github.io/property-rent-hub/sitemap.xml
