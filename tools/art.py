@@ -632,6 +632,8 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     with open(os.path.join(OUT, "panorama.svg"), "w") as fh:
         fh.write(panorama())
+    with open(os.path.join(OUT, "office-hero.svg"), "w") as fh:  # fallback for photos/office-hero.jpg
+        fh.write(panorama())
     for name, fn in SCENES.items():
         with open(os.path.join(OUT, name + ".svg"), "w") as fh:
             fh.write(fn())

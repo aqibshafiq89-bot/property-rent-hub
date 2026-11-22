@@ -1,27 +1,31 @@
 {
-  "_comment": "Alt text and captions for the general pictures. They show typical offices, not specific listings. If you replace a drawing with a photo (photos/<name>.jpg), describe the photo here and in content/locations/*.html (image_alt).",
+  "_comment": "Alt text and captions for the general pictures. They are example photos of typical offices (Unsplash licence, see photos/CREDITS.md), not specific listings. If you change a photo in photos/, describe the new one here and in content/locations/*.html (image_alt).",
+  "office-hero": {
+    "alt": "Example photo of a bright open-plan office with a long work table, chairs and floor-to-ceiling windows",
+    "caption": "A typical open-plan office"
+  },
   "furnished-office-dubai": {
-    "alt": "Illustration of a furnished private office with a desk, office chair, laptop, monitor and bookshelf by a window",
-    "caption": "A typical furnished private office"
+    "alt": "Example photo of a furnished office desk with a laptop, a monitor, a plant and an office chair",
+    "caption": "A typical furnished office desk"
   },
   "office-for-rent-port-saeed": {
-    "alt": "Illustration of a furnished office for two, with desks, office chairs and laptops in front of a window",
-    "caption": "A typical furnished office for two"
+    "alt": "Example photo of a furnished office with white desks, mesh office chairs and glass partitions",
+    "caption": "A typical furnished office with workstations"
   },
   "office-for-rent-al-barsha": {
-    "alt": "Illustration of a furnished team office with four desks, office chairs, laptops and a whiteboard",
-    "caption": "A typical team office"
+    "alt": "Example photo of a business centre corridor with glass-walled private offices and a lounge area",
+    "caption": "A typical business centre with private offices"
   },
   "sheikh-zayed-road-office": {
-    "alt": "Illustration of a furnished private office with a desk, laptop, office chair and a small meeting table by a large window",
+    "alt": "Example photo of a private office with a round meeting table and office chairs by floor-to-ceiling windows with a city view",
     "caption": "A typical private office with a meeting table"
   },
   "furnished-office-jlt": {
-    "alt": "Illustration of a shared workspace with a long table, office chairs, laptops and a sofa",
-    "caption": "A typical shared workspace"
+    "alt": "Example photo of a shared office with rows of desks, office chairs and glass partitions",
+    "caption": "A typical shared office"
   },
   "business-bay-office-rental": {
-    "alt": "Illustration of a meeting room with a table, office chairs, laptops and a wall screen",
+    "alt": "Example photo of a meeting room with an oval table, leather chairs, wood panelling and a wall screen",
     "caption": "A typical meeting room"
   }
 }

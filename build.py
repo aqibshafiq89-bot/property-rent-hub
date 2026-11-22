@@ -628,7 +628,7 @@ WhatsApp and phone: <a href="tel:{esc(cfg["phone_e164"])}" data-place="footer" c
 <div><h2>Guides</h2><ul>{guides}<li><a href="/blog/">All guides</a></li></ul></div>
 </div>
 <div class="footer-bottom">
-<p>Pictures marked as illustrations are not photos of specific offices; ask us for photos of any office.</p>
+<p>Pictures on this website show typical offices, not specific listings. Ask us for photos of any office.</p>
 <p>&copy; {year} {esc(cfg["site_name"])}. <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/privacy-policy/">Privacy</a></p>
 </div></div></footer>'''
 
@@ -758,8 +758,12 @@ def strip_map(site):
         label = "JLT" if l["key"] == "jlt" else l.get("long_name", l["name"])
         items.append(f'<li><a href="{l["path"]}"><span class="stop-name">{esc(label)}</span>'
                      f'<span class="stop-note">{esc(l["descriptor"])}</span></a></li>')
+    if is_photo("office-hero"):
+        art = picture("office-hero", IMAGES.get("office-hero", {}).get("alt", ""), "100vw", eager=True, ratio=(1600, 470))
+    else:
+        art = panorama(standalone=False)
     return ('<figure class="hero-figure" aria-labelledby="line-caption">'
-            f'<div class="panorama-box">{panorama(standalone=False)}</div>'
+            f'<div class="panorama-box">{art}</div>'
             f'<ol class="stops" aria-label="Office areas along the line, from Deira to JLT">{"".join(items)}</ol>'
             f'<figcaption class="stops-foot"><div class="wrap"><p id="line-caption">{esc(site.home["line_note"])}</p></div></figcaption></figure>')
 
@@ -828,7 +832,7 @@ def build_home(site):
     page = {"path": path, "title": h["seo_title"], "description": h["meta_description"], "page_type": "home",
             "body": body, "crumbs": [("Home", "/")], "og_title": "Office for Rent in Dubai: Property Rent Hub"}
     page["og_image_abs"] = site.abs(og_for("home"))
-    register_og("home", h["h1"], "Al Barsha, Port Saeed, Sheikh Zayed Road, JLT and Business Bay", "panorama")
+    register_og("home", h["h1"], "Al Barsha, Port Saeed, Sheikh Zayed Road, JLT and Business Bay", "office-hero")
     page["og_image_alt"] = "Property Rent Hub: offices for rent across Dubai, from Port Saeed to JLT"
     page["schema"] = [org_node(site), website_node(site), local_business_node(site),
                       webpage_node(site, page, "WebPage", {"about": {"@id": site.abs("/#organization")}})]
@@ -1249,7 +1253,7 @@ def build_contact(site):
             "page_type": "contact", "body": body, "crumbs": [("Home", "/"), ("Contact", path)], "modified": TODAY,
             "mobile_message": generic_message("WEB-CONTACT")}
     page["og_image_abs"] = site.abs(og_for("contact"))
-    register_og("contact", "Book an Office Viewing in Dubai", "WhatsApp " + cfg["phone_display"], "panorama")
+    register_og("contact", "Book an Office Viewing in Dubai", "WhatsApp " + cfg["phone_display"], "office-hero")
     page["schema"] = [org_node(site), website_node(site), local_business_node(site), webpage_node(site, page, "ContactPage"), breadcrumb_node(site, page)]
     return page
 

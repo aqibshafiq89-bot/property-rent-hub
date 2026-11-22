@@ -91,14 +91,16 @@ When an office is let, set `status` to `let` for a few weeks, then `hidden`. To 
 
 ## Pictures
 
-The general pictures are original drawings of ordinary furnished offices (desks, office chairs and laptops), made by `tools/art.py`. They show typical offices, not a specific listing, and every caption says so ("A typical meeting room (illustration)"). They use the file names you asked for (`furnished-office-dubai`, `office-for-rent-al-barsha`, `office-for-rent-port-saeed`, `sheikh-zayed-road-office`, `furnished-office-jlt`, `business-bay-office-rental`); the homepage strip is drawn straight into the page.
+The general pictures are **example photos of typical offices** from Unsplash, which are free to use on a business website (credits in `photos/CREDITS.md`). They show the kind of office on offer, not a specific listing. Every caption says "(example photo)", and the footer says that pictures show typical offices. The photos keep the file names you asked for (`furnished-office-dubai`, `office-for-rent-al-barsha`, `office-for-rent-port-saeed`, `sheikh-zayed-road-office`, `furnished-office-jlt`, `business-bay-office-rental`), plus `office-hero` for the wide homepage picture.
 
-To use photos of generic offices instead:
+To change a picture:
 
-1. Save each photo as `photos/<same-name>.jpg` (landscape, at least 1600 px wide). Use your own photos or stock photos you have a licence for.
-2. Run `python3 tools/make_images.py`. It crops, resizes and converts them to WebP and AVIF with the same names.
-3. Update the alt text and caption in `content/images.json` and the `image_alt` in `content/locations/*.html` so they describe the photo.
-4. Rebuild. Captions change from "(illustration)" to "(example photo)" automatically.
+1. Save the new photo as `photos/<same-name>.jpg` (landscape, at least 1600 px wide). Use your own photos or ones you have a licence for.
+2. Run `python3 tools/make_images.py`. It crops, resizes and converts it to WebP and AVIF. For the homepage picture, `IMAGES` in that script sets how far down the wide crop sits.
+3. Update its alt text and caption in `content/images.json` (and `image_alt` in `content/locations/*.html` for a location picture).
+4. Run `python3 tools/make_og.py` and `python3 build.py`, then publish.
+
+If a photo is removed, the original drawings in `tools/art.py` are used instead and the captions switch to "(illustration)".
 
 Photos of a real office that you are advertising belong on that office's page (the `photos` field in `content/properties.json`), never as a general picture.
 

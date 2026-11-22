@@ -19,8 +19,9 @@ ART = os.path.join(ROOT, "art")
 PHOTOS = os.path.join(ROOT, "photos")
 IMG = os.path.join(ROOT, "assets", "img")
 
-# name -> aspect ratio (w, h)
+# name -> aspect ratio (w, h), optionally with the vertical crop position (0 top, 0.5 middle, 1 bottom)
 IMAGES = {
+    "office-hero": (1600, 470, 0.62),
     "furnished-office-dubai": (16, 10),
     "office-for-rent-al-barsha": (16, 9),
     "office-for-rent-port-saeed": (16, 9),
@@ -41,15 +42,16 @@ def source_image(name, width):
         p = os.path.join(PHOTOS, name + ext)
         if os.path.exists(p):
             im = Image.open(p).convert("RGB")
-            aw, ah = IMAGES[name]
-            # centre-crop to the target aspect ratio
+            aw, ah = IMAGES[name][:2]
+            focus = IMAGES[name][2] if len(IMAGES[name]) > 2 else 0.5
+            # crop to the target aspect ratio (centred across, `focus` down)
             tw = im.width
             th = round(tw * ah / aw)
             if th > im.height:
                 th = im.height
                 tw = round(th * aw / ah)
             left = (im.width - tw) // 2
-            top = (im.height - th) // 2
+            top = round((im.height - th) * focus)
             im = im.crop((left, top, left + tw, top + th))
             return im.resize((width, round(width * ah / aw)), Image.LANCZOS)
     return render_svg(os.path.join(ART, name + ".svg"), width)

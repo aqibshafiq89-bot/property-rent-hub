@@ -55,7 +55,7 @@ def main():
     manifest_path = os.path.join(ROOT, "tools", "og-manifest.json")
     with open(manifest_path) as fh:
         items = json.load(fh)
-    items.append({"key": "default", "title": "Office for Rent in Dubai", "subtitle": "Furnished offices, flexible workspaces and Ejari options", "image": "panorama"})
+    items.append({"key": "default", "title": "Office for Rent in Dubai", "subtitle": "Furnished offices, flexible workspaces and Ejari options", "image": "office-hero"})
     os.makedirs(OUT, exist_ok=True)
     font_uri = data_uri(FONT, "font/woff2")
     logo_uri = data_uri(os.path.join(ROOT, "assets", "img", "logo-lockup.png"), "image/png")

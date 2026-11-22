@@ -2,8 +2,8 @@
 VOICE   An assured Dubai business host: plain facts, rental details shared on request, no hype.
 IDEA    Five office areas on one line, the way the Red Line links Port Saeed to JLT; office listings
         read like a tower lobby directory.
-PICTURE Plain furnished offices drawn as flat elevations: desks, office chairs and laptops. The
-        homepage strip is one long bench desk with a workstation above each area.
+PICTURE Real photos of ordinary, bright offices (example photos from Unsplash, captioned as such);
+        drawings in tools/art.py stand in when a photo is missing.
 COLOUR  White dominant, brand navy #0E2240 in full-bleed bands, brass #B58A3C as the sharp accent,
         a dark WhatsApp green only on chat actions. TYPE: Archivo, expanded width for headings.
 LAYOUT  Left-aligned. Headline above a full-width office strip and its five areas; content to 1200px,
@@ -210,7 +210,8 @@ h4 { font-size: var(--step-0); font-stretch: 104%; line-height: 1.35; letter-spa
 @media (max-width: 900px) { .hero-head { grid-template-columns: 1fr; } }
 .hero-figure { position: relative; margin: clamp(28px, 4vw, 48px) 0 0; }
 .panorama-box { position: relative; width: 100%; aspect-ratio: 1600 / 470; overflow: hidden; }
-.panorama-box svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.panorama-box svg, .panorama-box picture, .panorama-box img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.panorama-box img { object-fit: cover; object-position: 50% 60%; }
 
 .line-path { stroke-dasharray: 1700; stroke-dashoffset: 0; }
 @media (prefers-reduced-motion: no-preference) {
