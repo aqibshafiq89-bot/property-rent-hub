@@ -1,0 +1,7 @@
+{
+  "_comment": "Alt text for general images. Location images take their alt text from content/locations/*.html (image_alt). If you replace an illustration with a photo (photos/<name>.jpg), describe the photo here.",
+  "furnished-office-dubai": {
+    "alt": "Illustration of a furnished private office with a desk, chairs and shelving in front of a window overlooking the Dubai skyline",
+    "caption": "Furnished private office"
+  }
+}

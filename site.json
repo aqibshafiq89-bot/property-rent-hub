@@ -1,0 +1,49 @@
+{
+  "_comment": "Main settings. site_url is the address the site is published at. For your own domain later, change it to e.g. https://www.yourdomain.com and run: python3 build.py",
+  "site_url": "https://aqibshafiq89-bot.github.io/property-rent-hub",
+  "hosting": "github-pages",
+  "site_name": "Property Rent Hub",
+  "language": "en-AE",
+  "og_locale": "en_AE",
+  "phone_display": "+971 56 786 3596",
+  "phone_e164": "+971567863596",
+  "whatsapp_number": "971567863596",
+  "email": "",
+  "logo_path": "/assets/img/logo-square-512.png",
+
+  "business": {
+    "_comment": "Fill these in only after the Google Business Profile address is verified, then set address_verified to true. Until then no address, map or LocalBusiness data is published.",
+    "address_verified": false,
+    "legal_name": "",
+    "street_address": "",
+    "address_locality": "Dubai",
+    "address_region": "Dubai",
+    "postal_code": "",
+    "address_country": "AE",
+    "latitude": null,
+    "longitude": null,
+    "google_maps_url": "",
+    "google_maps_embed_src": "",
+    "opening_hours": []
+  },
+
+  "social_profiles": [],
+
+  "analytics": {
+    "_comment": "Use one of the two: a GA4 measurement ID (G-XXXXXXX) or a Google Tag Manager container ID (GTM-XXXXXXX).",
+    "ga4_measurement_id": "",
+    "gtm_container_id": ""
+  },
+
+  "verification": {
+    "google_site_verification": "",
+    "bing_site_verification": ""
+  },
+
+  "promo": {
+    "enabled": false,
+    "text": "Book an office this month and get one month of social media marketing free.",
+    "link_text": "Ask about the offer",
+    "whatsapp_message": "Hello Property Rent Hub, I'd like to know more about the office offer with one month of free social media marketing."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "seo_title": "Office for Rent in Dubai | Property Rent Hub",
+  "meta_description": "Find furnished offices for rent in Dubai with Ejari options. Explore Al Barsha, Port Saeed, Sheikh Zayed Road, JLT and Business Bay.",
+  "h1": "Find Your Perfect Office for Rent in Dubai",
+  "supporting": "Premium Furnished Offices, Flexible Workspaces and Ejari Solutions Across Dubai.",
+  "intro_heading": "Offices for rent across Dubai, from Deira to JLT",
+  "intro": [
+    "Looking for an office for rent in Dubai? Property Rent Hub helps entrepreneurs, startups and established companies discover professional workspaces that match their business requirements, preferred location and budget.",
+    "Explore furnished private offices, serviced offices, shared workspaces and virtual office solutions across Al Barsha, Port Saeed, Sheikh Zayed Road, Jumeirah Lakes Towers and Business Bay.",
+    "Whether you are establishing a new company, expanding your operations or relocating your existing business, we help you explore suitable office rental options and arrange property viewings."
+  ],
+  "intro_close": "Find your next workspace with Property Rent Hub.",
+  "line_note": "All five areas sit on the Dubai Metro Red Line, so your team can reach any of them by train.",
+  "directory_heading": "Offices available now",
+  "directory_intro": "Our current office options by area. Availability changes quickly, so message us for today's list and full rental details.",
+  "types_heading": "Choose your type of workspace",
+  "types": [
+    {
+      "name": "Furnished private office",
+      "text": "A lockable office for your team with the furniture already in place, so you can move in and start working. Ask whether internet, utilities and meeting-room access are included in the rent.",
+      "message": "Hello Property Rent Hub, I'm interested in a furnished private office in Dubai. Please share the available options and rental details."
+    },
+    {
+      "name": "Serviced office",
+      "text": "A private office inside a managed business centre, with shared services such as reception and meeting rooms. Services are usually bundled with the rent; confirm exactly what is covered.",
+      "message": "Hello Property Rent Hub, I'm interested in a serviced office in Dubai. Please share the available options and what is included."
+    },
+    {
+      "name": "Shared workspace",
+      "text": "A desk in a shared office. It keeps costs down for freelancers and one- or two-person companies. Check that the arrangement is accepted for your licence before you sign.",
+      "message": "Hello Property Rent Hub, I'm interested in a shared workspace or desk in Dubai. Please share the options and rental details."
+    },
+    {
+      "name": "Virtual office",
+      "text": "A business address without a desk of your own. Some licence types accept this and others do not, so confirm with your licensing authority first and ask us what each package includes.",
+      "message": "Hello Property Rent Hub, I'm interested in a virtual office solution in Dubai. Please share the options and what is included."
+    }
+  ],
+  "steps_heading": "How to book an office viewing",
+  "steps": [
+    {"title": "Tell us what you need", "text": "Send your preferred area, team size, budget and move-in date on WhatsApp. If you need Ejari for a trade licence, mention it at the start."},
+    {"title": "Get matching options", "text": "We send offices that fit, with the rent, what each one includes and its Ejari details, plus photos of the actual office."},
+    {"title": "View and decide", "text": "Pick a time to see the office in person and bring your questions about the contract, payments and move-in date."}
+  ],
+  "faq_heading": "Common questions",
+  "guides_heading": "Guides to renting an office in Dubai",
+  "final_heading": "Ready to see an office?",
+  "final_text": "Tell us the area, your team size and when you want to move in, and we will arrange a viewing at a time that suits you."
+}

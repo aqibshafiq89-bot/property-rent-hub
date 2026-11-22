@@ -1,0 +1,49 @@
+{
+  "_comment": "One entry per office. A property page is only indexed by search engines once it has a size (size_sqft) and at least 3 genuine photos; until then it is published with noindex and left out of the sitemap. Set status to 'let' when an office is taken, or 'hidden' to remove it from the site. Photos go in assets/img/properties/ as WebP files.",
+  "properties": [
+    {
+      "ref": "PRH-PS-01",
+      "slug": "furnished-office-port-saeed",
+      "location": "port-saeed",
+      "status": "available",
+      "title": "Furnished Private Office in Port Saeed, Deira",
+      "card_title": "Furnished private office",
+      "type": "Furnished private office",
+      "furnished": true,
+      "ejari": "ask",
+      "size_sqft": null,
+      "capacity": "",
+      "building": "",
+      "floor": "",
+      "available_from": "",
+      "availability_checked": "",
+      "amenities": [],
+      "photos": [],
+      "trakheesi_permit": "",
+      "summary": "A furnished private office in Port Saeed, the Deira business area around Deira City Centre and City Centre Deira metro station. Suitable for small teams, trading companies and startups looking for an affordable office close to Dubai Creek and the airport.",
+      "meta_description": "Furnished private office for rent in Port Saeed, Deira, near Dubai Creek and the airport. Check availability and Ejari options, and book a viewing on WhatsApp."
+    },
+    {
+      "ref": "PRH-AB-01",
+      "slug": "furnished-office-al-barsha",
+      "location": "al-barsha",
+      "status": "available",
+      "title": "Furnished Private Office in Al Barsha, Dubai",
+      "card_title": "Furnished private office",
+      "type": "Furnished private office",
+      "furnished": true,
+      "ejari": "ask",
+      "size_sqft": null,
+      "capacity": "",
+      "building": "",
+      "floor": "",
+      "available_from": "",
+      "availability_checked": "",
+      "amenities": [],
+      "photos": [],
+      "trakheesi_permit": "",
+      "summary": "A furnished private office in Al Barsha, west Dubai, close to Sheikh Zayed Road and the Mall of the Emirates area. Suitable for professionals, consultancies and small teams who want a ready-to-use office with good road and metro access.",
+      "meta_description": "Furnished private office for rent in Al Barsha, Dubai, close to Sheikh Zayed Road and the metro. Ask about availability and Ejari, and book a viewing on WhatsApp."
+    }
+  ]
+}
