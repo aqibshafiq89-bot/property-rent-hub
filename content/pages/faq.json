@@ -1,37 +1,67 @@
 {
   "seo_title": "Office Rental FAQs Dubai | Property Rent Hub",
-  "meta_description": "Answers to common questions about renting an office in Dubai: rent, Ejari, VAT, furnished offices, locations and how to book a viewing.",
+  "meta_description": "Answers to common questions about renting an office in Dubai: office rent, Ejari, furnished offices, locations and how to book a viewing.",
   "h1": "Office Rental FAQs: Renting an Office in Dubai",
   "lede": "Short answers to the questions we hear most. For anything specific to an office, message us on WhatsApp.",
   "groups": [
     {
-      "heading": "Rent and costs",
+      "heading": "Office rent",
       "items": [
-        {"q": "How much does an office cost to rent in Dubai?", "a": "<p>Office rent depends on location, size, facilities, furnishing and rental conditions. Contact Property Rent Hub for current rental details and available options.</p><p>For a breakdown of the costs beyond the rent, read <a href=\"/blog/office-rent-cost-dubai/\">How Much Does It Cost to Rent an Office in Dubai?</a></p>", "home": true},
-        {"q": "Where can I find affordable offices for rent in Dubai?", "a": "<p>Explore office rental opportunities in areas such as <a href=\"/office-for-rent-port-saeed/\">Port Saeed</a> and <a href=\"/office-for-rent-al-barsha/\">Al Barsha</a>. Actual affordability depends on your budget and current property availability.</p>", "home": true},
-        {"q": "Is VAT charged on office rent in Dubai?", "a": "<p>Yes. Leases of commercial property in the UAE are subject to VAT at the standard rate of 5%. Ask whether a quoted rent already includes it.</p>"}
+        {
+          "q": "How much does an office cost to rent in Dubai?",
+          "a": "<p>Office rent depends on location, size, facilities, furnishing and rental conditions. Contact Property Rent Hub for current rental details and available options.</p><p>To see what decides the rent, read <a href=\"/blog/office-rent-cost-dubai/\">How Much Does It Cost to Rent an Office in Dubai?</a></p>",
+          "home": true
+        },
+        {
+          "q": "Where can I find affordable offices for rent in Dubai?",
+          "a": "<p>Explore office rental opportunities in areas such as <a href=\"/office-for-rent-port-saeed/\">Port Saeed</a> and <a href=\"/office-for-rent-al-barsha/\">Al Barsha</a>. Actual affordability depends on your budget and current property availability.</p>",
+          "home": true
+        }
       ]
     },
     {
       "heading": "Ejari and licensing",
       "items": [
-        {"q": "Can I rent a furnished office with Ejari in Dubai?", "a": "<p>Some office rental options may include Ejari. Confirm availability and eligibility for the specific property before signing an agreement.</p><p>Our guide <a href=\"/blog/what-is-ejari-office-rentals/\">What Is Ejari and Why Is It Important for Office Rentals?</a> explains how registration works.</p>", "home": true},
-        {"q": "Can I rent an office for my new company in Dubai?", "a": "<p>Office requirements depend on your business activity, licensing authority and applicable regulations. Contact us to discuss suitable workspace options.</p><p>The <a href=\"/blog/office-rental-checklist-new-business-dubai/\">office rental checklist for new businesses</a> sets out the steps in order.</p>"},
-        {"q": "What documents do I need to rent an office?", "a": "<p>Landlords usually ask for your trade licence (or your initial approval if the company is still being set up) and passport and Emirates ID copies for the person signing. Registering the lease through Ejari also needs the company's licence details. Requirements vary by landlord and licensing authority, so we confirm them for each office.</p>"}
+        {
+          "q": "Can I rent a furnished office with Ejari in Dubai?",
+          "a": "<p>Some office rental options may include Ejari. Confirm availability and eligibility for the specific property before signing an agreement.</p><p>Our guide <a href=\"/blog/what-is-ejari-office-rentals/\">What Is Ejari and Why Is It Important for Office Rentals?</a> explains how registration works.</p>",
+          "home": true
+        },
+        {
+          "q": "Can I rent an office for my new company in Dubai?",
+          "a": "<p>Office requirements depend on your business activity, licensing authority and applicable regulations. Contact us to discuss suitable workspace options.</p><p>The <a href=\"/blog/office-rental-checklist-new-business-dubai/\">office rental checklist for new businesses</a> sets out the steps in order.</p>"
+        },
+        {
+          "q": "What documents do I need to rent an office?",
+          "a": "<p>Landlords usually ask for your trade licence (or your initial approval if the company is still being set up) and passport and Emirates ID copies for the person signing. Registering the lease through Ejari also needs the company's licence details. Requirements vary by landlord and licensing authority, so we confirm them for each office.</p>"
+        }
       ]
     },
     {
       "heading": "Locations",
       "items": [
-        {"q": "Which Dubai locations do you cover?", "a": "<p>Property Rent Hub focuses on office rental opportunities in <a href=\"/office-for-rent-al-barsha/\">Al Barsha</a>, <a href=\"/office-for-rent-port-saeed/\">Port Saeed</a>, <a href=\"/office-for-rent-sheikh-zayed-road/\">Sheikh Zayed Road</a>, <a href=\"/office-for-rent-jlt/\">Jumeirah Lakes Towers</a> and <a href=\"/office-for-rent-business-bay/\">Business Bay</a>.</p>", "home": true},
-        {"q": "Do you have a branch in every location?", "a": "<p>No. We advertise offices in these five areas and arrange viewings at each property. Our own contact details are on the <a href=\"/contact/\">contact page</a>.</p>"}
+        {
+          "q": "Which Dubai locations do you cover?",
+          "a": "<p>Property Rent Hub focuses on office rental opportunities in <a href=\"/office-for-rent-al-barsha/\">Al Barsha</a>, <a href=\"/office-for-rent-port-saeed/\">Port Saeed</a>, <a href=\"/office-for-rent-sheikh-zayed-road/\">Sheikh Zayed Road</a>, <a href=\"/office-for-rent-jlt/\">Jumeirah Lakes Towers</a> and <a href=\"/office-for-rent-business-bay/\">Business Bay</a>.</p>",
+          "home": true
+        },
+        {
+          "q": "Do you have a branch in every location?",
+          "a": "<p>No. We advertise offices in these five areas and arrange viewings at each property. Our own contact details are on the <a href=\"/contact/\">contact page</a>.</p>"
+        }
       ]
     },
     {
       "heading": "Viewings",
       "items": [
-        {"q": "How can I book an office viewing?", "a": "<p>Select your preferred office location or property and contact us through WhatsApp to request a viewing.</p>"},
-        {"q": "Can I see photos before a viewing?", "a": "<p>Yes. Ask on WhatsApp and we will send photos or a short video of the specific office you are interested in.</p>"}
+        {
+          "q": "How can I book an office viewing?",
+          "a": "<p>Select your preferred office location or property and contact us through WhatsApp to request a viewing.</p>"
+        },
+        {
+          "q": "Can I see photos before a viewing?",
+          "a": "<p>Yes. Ask on WhatsApp and we will send photos or a short video of the specific office you are interested in.</p>"
+        }
       ]
     }
   ]

@@ -1,11 +1,12 @@
 /*
 VOICE   An assured Dubai business host: plain facts, rental details shared on request, no hype.
-IDEA    A transit strip map. Five office districts strung along one line, the way the Red Line links
-        Port Saeed to JLT; office listings read like a tower lobby directory.
-PICTURE An architect's elevation of five district skylines on an elevated brass line, one lit window.
+IDEA    Five office areas on one line, the way the Red Line links Port Saeed to JLT; office listings
+        read like a tower lobby directory.
+PICTURE Plain furnished offices drawn as flat elevations: desks, office chairs and laptops. The
+        homepage strip is one long bench desk with a workstation above each area.
 COLOUR  White dominant, brand navy #0E2240 in full-bleed bands, brass #B58A3C as the sharp accent,
         a dark WhatsApp green only on chat actions. TYPE: Archivo, expanded width for headings.
-LAYOUT  Left-aligned. Headline above a full-width panorama and its five stops; content to 1200px,
+LAYOUT  Left-aligned. Headline above a full-width office strip and its five areas; content to 1200px,
         reading column to 68ch; navy bands carry the directory and the footer.
 */
 
@@ -212,18 +213,17 @@ h4 { font-size: var(--step-0); font-stretch: 104%; line-height: 1.35; letter-spa
 .panorama-box svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 
 .line-path { stroke-dasharray: 1700; stroke-dashoffset: 0; }
-.stop circle { transform-box: fill-box; transform-origin: center; }
 @media (prefers-reduced-motion: no-preference) {
   .js .line-path { animation: draw-line 1.5s cubic-bezier(.45, .05, .25, 1) .2s both; }
-  .js .stop circle { animation: stop-in .35s ease-out both; }
-  .js .stop.s1 circle { animation-delay: .35s; }
-  .js .stop.s2 circle { animation-delay: .6s; }
-  .js .stop.s3 circle { animation-delay: .85s; }
-  .js .stop.s4 circle { animation-delay: 1.1s; }
-  .js .stop.s5 circle { animation-delay: 1.35s; }
+  .js .stop .screen { animation: screen-on .45s ease-out both; }
+  .js .stop.s1 .screen { animation-delay: .35s; }
+  .js .stop.s2 .screen { animation-delay: .6s; }
+  .js .stop.s3 .screen { animation-delay: .85s; }
+  .js .stop.s4 .screen { animation-delay: 1.1s; }
+  .js .stop.s5 .screen { animation-delay: 1.35s; }
 }
 @keyframes draw-line { from { stroke-dashoffset: 1700; } to { stroke-dashoffset: 0; } }
-@keyframes stop-in { from { transform: scale(0); } to { transform: scale(1); } }
+@keyframes screen-on { from { opacity: 0; } to { opacity: 1; } }
 
 .stops {
   display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));

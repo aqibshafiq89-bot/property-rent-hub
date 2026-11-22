@@ -89,16 +89,18 @@ Edit `content/properties.json`, then rebuild. Each office has:
 
 When an office is let, set `status` to `let` for a few weeks, then `hidden`. To add an office in a new area, copy an existing entry.
 
-## Replacing the illustrations with licensed photos
+## Pictures
 
-The general pictures are original illustrations, clearly captioned as illustrations, using the file names you asked for (`furnished-office-dubai`, `office-for-rent-al-barsha`, `office-for-rent-port-saeed`, `sheikh-zayed-road-office`, `furnished-office-jlt`, `business-bay-office-rental`). To swap in licensed stock photos:
+The general pictures are original drawings of ordinary furnished offices (desks, office chairs and laptops), made by `tools/art.py`. They show typical offices, not a specific listing, and every caption says so ("A typical meeting room (illustration)"). They use the file names you asked for (`furnished-office-dubai`, `office-for-rent-al-barsha`, `office-for-rent-port-saeed`, `sheikh-zayed-road-office`, `furnished-office-jlt`, `business-bay-office-rental`); the homepage strip is drawn straight into the page.
 
-1. Save each photo as `photos/<same-name>.jpg` (landscape, at least 1600 px wide).
+To use photos of generic offices instead:
+
+1. Save each photo as `photos/<same-name>.jpg` (landscape, at least 1600 px wide). Use your own photos or stock photos you have a licence for.
 2. Run `python3 tools/make_images.py`. It crops, resizes and converts them to WebP and AVIF with the same names.
-3. Update the alt text to describe the photo: location images in `content/locations/*.html` (`image_alt`), the office interior in `content/images.json`.
-4. Rebuild. Captions switch from "illustration" to the plain caption automatically once a photo exists.
+3. Update the alt text and caption in `content/images.json` and the `image_alt` in `content/locations/*.html` so they describe the photo.
+4. Rebuild. Captions change from "(illustration)" to "(example photo)" automatically.
 
-Never use a photo of a different building to represent a specific listed office.
+Photos of a real office that you are advertising belong on that office's page (the `photos` field in `content/properties.json`), never as a general picture.
 
 ## Logo
 

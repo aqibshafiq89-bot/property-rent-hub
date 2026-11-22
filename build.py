@@ -735,8 +735,13 @@ def is_photo(name):
     return any(os.path.exists(os.path.join(ROOT, "photos", name + ext)) for ext in (".jpg", ".jpeg", ".png", ".webp"))
 
 
+def image_caption(name):
+    return IMAGES.get(name, {}).get("caption", "A typical office")
+
+
 def caption(text, name):
-    return text if is_photo(name) else f"{text} (illustration)"
+    """Pictures show typical offices, never a specific listing, and say so."""
+    return f"{text} (example photo)" if is_photo(name) else f"{text} (illustration)"
 
 
 def image_alt(site, name):
@@ -786,7 +791,7 @@ def build_home(site):
 <section class="band" aria-labelledby="intro-title"><div class="wrap split">
 <div><h2 id="intro-title">{esc(h["intro_heading"])}</h2>
 <figure class="figure" style="margin-top:28px">{picture("furnished-office-dubai", image_alt(site, "furnished-office-dubai"), "(min-width: 860px) 48vw, 100vw", ratio=(16, 10))}
-<figcaption>{esc(caption("Furnished private office", "furnished-office-dubai"))}</figcaption></figure></div>
+<figcaption>{esc(caption(image_caption("furnished-office-dubai"), "furnished-office-dubai"))}</figcaption></figure></div>
 <div class="measure">{intro}<p><strong>{esc(h["intro_close"])}</strong></p>
 <div class="btn-row"><a class="btn btn-ghost" href="/contact/">Book Your Office Viewing</a></div></div>
 </div></section>
@@ -859,7 +864,7 @@ def build_location(site, loc):
 <div class="wrap loc-grid">
 <div>
 <figure class="figure">{picture(loc["image"], loc["image_alt"], "(min-width: 1240px) 780px, (min-width: 900px) 62vw, 100vw", eager=True)}
-<figcaption>{esc(caption(loc["name"] + ", Dubai", loc["image"]))}</figcaption></figure>
+<figcaption>{esc(caption(image_caption(loc["image"]), loc["image"]))}</figcaption></figure>
 <div class="prose" style="margin-top:28px">{loc["body"]}</div>
 </div>
 <aside class="aside-sticky" aria-labelledby="facts-title">
@@ -959,13 +964,12 @@ def build_property(site, p):
 <h2>About the location</h2>
 <p>{esc(loc["lede"])} Read more about <a href="{loc["path"]}">offices for rent in {esc(loc["name"])}</a>, including transport, licensing and what to check before you sign.</p>
 <figure class="figure" style="margin:22px 0">{picture(loc["image"], loc["image_alt"], "(min-width: 1240px) 780px, (min-width: 900px) 62vw, 100vw")}
-<figcaption>{esc(loc["name"])}, Dubai: {"photo" if is_photo(loc["image"]) else "illustration"} of the area, not of this office</figcaption></figure>
+<figcaption>{"Example photo" if is_photo(loc["image"]) else "Illustration"} of a typical office, not of this office</figcaption></figure>
 <h2>Questions to ask before your viewing</h2>
 <ul class="checklist">
-<li>What is the total yearly rent, and does it include 5% VAT?</li>
 <li>What does the rent cover: furniture, internet, electricity and water, cleaning, meeting rooms?</li>
 <li>Can the lease be registered through Ejari for my company and activity?</li>
-<li>How many payments can the rent be split into, and what deposit is needed?</li>
+<li>How many payments can the rent be split into?</li>
 <li>Is parking included, and where do visitors park?</li>
 <li>When can I move in, and how long is the contract?</li>
 </ul>
@@ -1012,7 +1016,7 @@ def build_offices(site):
 <h2 id="off-help">Don't see the right office?</h2>
 <p class="measure">Tell us what you need and we will check current availability across Port Saeed, Sheikh Zayed Road, Business Bay, Al Barsha and JLT. Include your team size, budget and move-in date, and whether you need Ejari for your trade licence.</p>
 <figure class="figure" style="margin-top:24px">{picture("furnished-office-dubai", image_alt(site, "furnished-office-dubai"), "(min-width: 900px) 50vw, 100vw", ratio=(16, 10))}
-<figcaption>{esc(caption("Furnished private office", "furnished-office-dubai"))}</figcaption></figure>
+<figcaption>{esc(caption(image_caption("furnished-office-dubai"), "furnished-office-dubai"))}</figcaption></figure>
 </div>
 <div>{enquiry_form(site, "offices-form", "Available offices page", level=3)}</div>
 </div></section>
@@ -1049,7 +1053,7 @@ def build_blog_index(site):
     body = f'''{crumbs_html([("Home", "/"), ("Guides", path)])}
 <section class="page-head"><div class="wrap">
 <h1>Office Rental Guides for Dubai</h1>
-<p class="lede">Plain-language guides to renting an office in Dubai: costs, Ejari, contracts, workspace types and how the main business areas compare. Each guide links to the official sources we used.</p>
+<p class="lede">Plain-language guides to renting an office in Dubai: Ejari, contracts, workspace types and how the main business areas compare. Guides that refer to rules link to the official sources we used.</p>
 </div></section>
 {sections}
 {cta_band(site, "Looking for an office now?", "Tell us your area, team size and move-in date and we will send matching offices on WhatsApp.", generic_message("WEB-BLOG"), "blog-index")}'''
@@ -1081,7 +1085,7 @@ def build_post(site, post):
     if post.get("sources"):
         sources = '<section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources</h2><ol>' + "".join(
             f'<li><a href="{esc(s["url"])}" rel="noopener" target="_blank">{esc(s["title"])}</a></li>' for s in post["sources"]) + \
-            f'</ol><p>Reviewed by the Property Rent Hub team on {fmt_date(post["date_modified"])}. Rules and fees change; check the official source before you act.</p></section>'
+            f'</ol><p>Reviewed by the Property Rent Hub team on {fmt_date(post["date_modified"])}. Rules change; check the official source before you act.</p></section>'
     rel_locs = "".join(f'<li><a href="{site.loc_by_key[k]["path"]}">Offices in {esc(site.loc_by_key[k].get("long_name", site.loc_by_key[k]["name"]))}</a></li>'
                        for k in post.get("related_locations", []) if k in site.loc_by_key)
     rel_posts = "".join(f'<li><a href="{site.post_by_slug[s]["path"]}">{esc(site.post_by_slug[s]["title"])}</a></li>'
@@ -1094,7 +1098,7 @@ def build_post(site, post):
     if post.get("image"):
         ratio = (16, 10) if post["image"] == "furnished-office-dubai" else (16, 9)
         hero_img = (f'<figure class="figure" style="margin:0 0 28px">{picture(post["image"], image_alt(site, post["image"]), "(min-width: 1240px) 700px, (min-width: 980px) 58vw, 100vw", eager=True, ratio=ratio)}'
-                    f'<figcaption>{"Photo" if is_photo(post["image"]) else "Illustration"}</figcaption></figure>')
+                    f'<figcaption>{esc(caption(image_caption(post["image"]), post["image"]))}</figcaption></figure>')
     body = f'''{crumbs_html([("Home", "/"), ("Guides", "/blog/"), (post["title"], path)])}
 <article class="article">
 <header class="wrap article-head">
@@ -1192,7 +1196,7 @@ def build_faq(site):
     page = {"path": path, "title": f["seo_title"], "description": f["meta_description"], "page_type": "faq",
             "body": body, "crumbs": [("Home", "/"), ("FAQ", path)], "modified": TODAY}
     page["og_image_abs"] = site.abs(og_for("faq"))
-    register_og("faq", f["h1"], "Rent, Ejari, VAT, locations and viewings", "furnished-office-dubai")
+    register_og("faq", f["h1"], "Office rent, Ejari, locations and viewings", "furnished-office-dubai")
     qa = [{"@type": "Question", "name": it["q"], "acceptedAnswer": {"@type": "Answer", "text": strip_tags(it["a"])}}
           for g in f["groups"] for it in g["items"]]
     page["schema"] = [org_node(site), website_node(site), webpage_node(site, page, "FAQPage", {"mainEntity": qa}), breadcrumb_node(site, page)]

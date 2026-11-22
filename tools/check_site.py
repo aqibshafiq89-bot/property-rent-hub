@@ -18,9 +18,9 @@ CFG = json.load(open(os.path.join(ROOT, "site.json")))
 SITE = CFG["site_url"].rstrip("/")
 BASE = urlsplit(SITE).path.rstrip("/")  # "/property-rent-hub" on a GitHub project site
 WA = CFG["whatsapp_number"]
-# Office prices must never appear on the site (owner's instruction).
-PRICE_PATTERNS = [r"(?i)\b(from|starting( at| from)?)\s+AED\s?\d", r"(?i)previously advertised", r"(?i)price guide",
-                  r"(?i)AED\s?\d[\d,]*\s*(a|per)\s*(year|yr|month)", r"(?i)AED\s?\d[\d,]*\s*/\s*(yr|year)"]
+# Owner's instruction: no prices, fees, VAT or other cost figures anywhere on the site.
+PRICE_PATTERNS = [r"(?i)AED\s?\d", r"(?i)\bdhs?\.?\s?\d", r"\bVAT\b", r"\d\s?%", r"(?i)\bper cent\b",
+                  r"(?i)previously advertised", r"(?i)price guide", r"(?i)\bprices?\b"]
 
 problems = []
 
@@ -128,7 +128,7 @@ def main():
         visible = re.sub(r"<script.*?</script>|<[^>]+>", " ", text, flags=re.S)
         for pat in PRICE_PATTERNS:
             for m in re.finditer(pat, visible):
-                problem(u, f"office price on the page: '{visible[max(0, m.start() - 30):m.end() + 20].strip()}'")
+                problem(u, f"price, fee or VAT on the page: '{visible[max(0, m.start() - 30):m.end() + 20].strip()}'")
         noindex = "noindex" in p.meta.get("robots", "")
         if p.h1 != 1:
             problem(u, f"{p.h1} h1 elements")

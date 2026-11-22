@@ -1,7 +1,27 @@
 {
-  "_comment": "Alt text for general images. Location images take their alt text from content/locations/*.html (image_alt). If you replace an illustration with a photo (photos/<name>.jpg), describe the photo here.",
+  "_comment": "Alt text and captions for the general pictures. They show typical offices, not specific listings. If you replace a drawing with a photo (photos/<name>.jpg), describe the photo here and in content/locations/*.html (image_alt).",
   "furnished-office-dubai": {
-    "alt": "Illustration of a furnished private office with a desk, chairs and shelving in front of a window overlooking the Dubai skyline",
-    "caption": "Furnished private office"
+    "alt": "Illustration of a furnished private office with a desk, office chair, laptop, monitor and bookshelf by a window",
+    "caption": "A typical furnished private office"
+  },
+  "office-for-rent-port-saeed": {
+    "alt": "Illustration of a furnished office for two, with desks, office chairs and laptops in front of a window",
+    "caption": "A typical furnished office for two"
+  },
+  "office-for-rent-al-barsha": {
+    "alt": "Illustration of a furnished team office with four desks, office chairs, laptops and a whiteboard",
+    "caption": "A typical team office"
+  },
+  "sheikh-zayed-road-office": {
+    "alt": "Illustration of a furnished private office with a desk, laptop, office chair and a small meeting table by a large window",
+    "caption": "A typical private office with a meeting table"
+  },
+  "furnished-office-jlt": {
+    "alt": "Illustration of a shared workspace with a long table, office chairs, laptops and a sofa",
+    "caption": "A typical shared workspace"
+  },
+  "business-bay-office-rental": {
+    "alt": "Illustration of a meeting room with a table, office chairs, laptops and a wall screen",
+    "caption": "A typical meeting room"
   }
 }
